@@ -1,10 +1,6 @@
-interface HomePagePropsI {
-  PlaceList: React.ElementType;
-}
+import { PlaceList } from '@/widgets/home/PlaceList';
 
-export const HomePage: React.FC<HomePagePropsI> = ({
-  PlaceList,
-}: HomePagePropsI) => (
+export const HomePage: React.FC = () => (
   <div className="page page--gray page--main">
     <header className="header">
       <div className="container">
