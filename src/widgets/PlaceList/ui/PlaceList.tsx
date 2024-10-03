@@ -1,9 +1,9 @@
-import { PlaceCard } from '@/entities/home/PlaceCard';
-import { placeListData } from '../lib/data';
+import { PlaceCard } from '@/entities/PlaceCard';
+import { offersMockData } from '@/shared/api';
 
 export const PlaceList: React.FC = () => (
   <div className="cities__places-list places__list tabs__content">
-    {placeListData.map((item) => (
+    {offersMockData.map((item) => (
       <PlaceCard key={item.id} {...item} />
     ))}
   </div>

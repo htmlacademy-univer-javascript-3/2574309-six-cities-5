@@ -1,10 +1,13 @@
+import { Link } from 'react-router-dom';
 import { PlaceCardProps } from './PlaceCard.props';
 
 export const PlaceCard: React.FC<PlaceCardProps> = ({
+  id,
   premium,
-  imgSrc,
+  images,
   price,
   rating,
+  name,
 }: PlaceCardProps) => (
   <article className="cities__card place-card">
     {premium && (
@@ -12,17 +15,17 @@ export const PlaceCard: React.FC<PlaceCardProps> = ({
         <span>Premium</span>
       </div>
     )}
-    {imgSrc && (
+    {images.length && (
       <div className="cities__image-wrapper place-card__image-wrapper">
-        <a href="#">
+        <Link to={`/offers:${id}`}>
           <img
             className="place-card__image"
-            src={imgSrc}
+            src={images[0].src}
             width="260"
             height="200"
             alt="Place image"
           />
-        </a>
+        </Link>
       </div>
     )}
     <div className="place-card__info">
@@ -45,7 +48,7 @@ export const PlaceCard: React.FC<PlaceCardProps> = ({
         </div>
       </div>
       <h2 className="place-card__name">
-        <a href="#">Beautiful &amp; luxurious apartment at great location</a>
+        <a href="#">{name}</a>
       </h2>
       <p className="place-card__type">Apartment</p>
     </div>

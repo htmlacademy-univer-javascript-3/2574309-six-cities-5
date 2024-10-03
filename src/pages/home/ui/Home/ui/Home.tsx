@@ -1,4 +1,4 @@
-import { PlaceList } from '@/widgets/home/PlaceList';
+import { PlaceList } from '@/widgets/PlaceList';
 
 export const HomePage: React.FC = () => (
   <div className="page page--gray page--main">
