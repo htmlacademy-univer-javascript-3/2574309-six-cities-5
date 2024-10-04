@@ -6,9 +6,11 @@ export interface Image {
 export interface Host {
   name: string;
   status: string;
+  imgSrc: string;
 }
 
 export interface Review {
+  id: number;
   name: string;
   imgSrc: string;
   rating: number;
@@ -16,7 +18,7 @@ export interface Review {
   date: string;
 }
 
-export interface Offer {
+export interface OfferI {
   id: number;
   images: Image[];
   premium: boolean;
@@ -26,8 +28,13 @@ export interface Offer {
   bedroomsCount: number;
   maxAdults: number;
   price: number;
-  insideItems: string[];
+  insideItems: number[];
   host: Host;
   offerText: string;
   reviews: Review[];
+}
+
+export interface InsideItemsRefbookI {
+  id: number;
+  name: string;
 }

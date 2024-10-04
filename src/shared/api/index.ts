@@ -1,2 +1,6 @@
-export { offersMockData } from './offers.mocks';
-export type { Offer } from './offers.types';
+export {
+  getOffersMockData,
+  getOfferMockData,
+  getInsideItemsRefbook,
+} from './offers.mocks';
+export type { OfferI, InsideItemsRefbookI } from './offers.types';

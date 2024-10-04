@@ -1,3 +1,5 @@
-import { Offer } from '@/shared/api';
+import { OfferI } from '@/shared/api';
 
-export interface PlaceCardProps extends Offer {}
+export interface PlaceCardProps extends OfferI {
+    rootBEMClassName?: string;
+}

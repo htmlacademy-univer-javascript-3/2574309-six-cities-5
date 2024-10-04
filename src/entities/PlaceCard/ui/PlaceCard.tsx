@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { PlaceCardProps } from './PlaceCard.props';
+import { classNamesConcat } from '@/shared/utils/classNamesConcat';
 
 export const PlaceCard: React.FC<PlaceCardProps> = ({
   id,
@@ -8,16 +9,17 @@ export const PlaceCard: React.FC<PlaceCardProps> = ({
   price,
   rating,
   name,
+  rootBEMClassName,
 }: PlaceCardProps) => (
-  <article className="cities__card place-card">
+  <article className={classNamesConcat('place-card', {[`${rootBEMClassName}__card`]: rootBEMClassName})}>
     {premium && (
       <div className="place-card__mark">
         <span>Premium</span>
       </div>
     )}
     {images.length && (
-      <div className="cities__image-wrapper place-card__image-wrapper">
-        <Link to={`/offers:${id}`}>
+      <div className={classNamesConcat({[`${rootBEMClassName}__image-wrapper`]: rootBEMClassName}, 'place-card__image-wrapper')}>
+        <Link to={`/offer/${id}`}>
           <img
             className="place-card__image"
             src={images[0].src}
