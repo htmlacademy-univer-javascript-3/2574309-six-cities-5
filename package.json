@@ -59,5 +59,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "- Студент: [Данил Богданчиков](https://up.htmlacademy.ru/univer-js3/5/user/2574309). - Наставник: `Глеб Клецков`.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MypyMypy/2574309-six-cities-5.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MypyMypy/2574309-six-cities-5/issues"
+  },
+  "homepage": "https://github.com/MypyMypy/2574309-six-cities-5#readme"
 }

@@ -1,28 +1,33 @@
+import { Link } from 'react-router-dom';
 import { PlaceCardProps } from './PlaceCard.props';
+import { classNamesConcat } from '@/shared/utils/classNamesConcat';
 
 export const PlaceCard: React.FC<PlaceCardProps> = ({
+  id,
   premium,
-  imgSrc,
+  images,
   price,
   rating,
+  name,
+  rootBEMClassName,
 }: PlaceCardProps) => (
-  <article className="cities__card place-card">
+  <article className={classNamesConcat('place-card', {[`${rootBEMClassName}__card`]: rootBEMClassName})}>
     {premium && (
       <div className="place-card__mark">
         <span>Premium</span>
       </div>
     )}
-    {imgSrc && (
-      <div className="cities__image-wrapper place-card__image-wrapper">
-        <a href="#">
+    {images.length && (
+      <div className={classNamesConcat({[`${rootBEMClassName}__image-wrapper`]: rootBEMClassName}, 'place-card__image-wrapper')}>
+        <Link to={`/offer/${id}`}>
           <img
             className="place-card__image"
-            src={imgSrc}
+            src={images[0].src}
             width="260"
             height="200"
             alt="Place image"
           />
-        </a>
+        </Link>
       </div>
     )}
     <div className="place-card__info">
@@ -45,7 +50,7 @@ export const PlaceCard: React.FC<PlaceCardProps> = ({
         </div>
       </div>
       <h2 className="place-card__name">
-        <a href="#">Beautiful &amp; luxurious apartment at great location</a>
+        <a href="#">{name}</a>
       </h2>
       <p className="place-card__type">Apartment</p>
     </div>

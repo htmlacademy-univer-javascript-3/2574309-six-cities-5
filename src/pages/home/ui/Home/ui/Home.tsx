@@ -1,4 +1,4 @@
-import { PlaceList } from '@/widgets/home/PlaceList';
+import { PlaceList } from '@/widgets/PlaceList';
 
 export const HomePage: React.FC = () => (
   <div className="page page--gray page--main">
@@ -110,7 +110,7 @@ export const HomePage: React.FC = () => (
                 </li>
               </ul>
             </form>
-            <PlaceList />
+            <PlaceList rootBEMClassName='cities' className="cities__places-list places__list tabs__content" />
           </section>
           <div className="cities__right-section">
             <section className="cities__map map"></section>
