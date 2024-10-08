@@ -1,9 +1,3 @@
-import { HomePage } from '@/pages/home';
+import { AppRouter } from '@/pages';
 
-interface AppPropsI {
-  PlaceList: React.ElementType;
-}
-
-export const App: React.FC<AppPropsI> = ({ PlaceList }: AppPropsI) => (
-  <HomePage PlaceList={PlaceList} />
-);
+export const App: React.FC = () => <AppRouter />;
